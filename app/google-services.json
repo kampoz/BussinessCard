@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "744665932848",
+    "firebase_url": "https://business-card-c826a.firebaseio.com",
+    "project_id": "business-card-c826a",
+    "storage_bucket": "business-card-c826a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744665932848:android:769e2af7a6e533d78d39f5",
+        "android_client_info": {
+          "package_name": "com.kamilpoznakowski.businesscard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744665932848-hv1ic7os8gh6k1a4mnv2805rg68tijo6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kamilpoznakowski.businesscard",
+            "certificate_hash": "18a7d190fb4106279ad584fa156f1037c9e7b158"
+          }
+        },
+        {
+          "client_id": "744665932848-c494rflhknr2k5mhk9h1leq5jbi3b5p8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDDJfmUrve-eEGEuE0wNiAIMZ5zrZJX7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744665932848-c494rflhknr2k5mhk9h1leq5jbi3b5p8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
