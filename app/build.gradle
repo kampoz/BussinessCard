@@ -23,13 +23,14 @@ android {
 }
 
 dependencies {
-    def nav_version = "2.1.0"
+    def nav_version = "2.2.1"
     def koin_version = '2.0.1'
+    def lifecycle_ver = '1.1.1'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
@@ -40,10 +41,16 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     implementation "org.koin:koin-android:$koin_version"
-    implementation 'com.google.firebase:firebase-core:17.2.1'
-    implementation 'com.google.firebase:firebase-database:19.2.0'
-    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
+    implementation 'com.google.firebase:firebase-core:17.2.3'
+    implementation 'com.google.firebase:firebase-database:19.2.1'
+    implementation 'com.google.firebase:firebase-analytics:17.2.3'
     implementation 'com.google.firebase:firebase-crash:16.2.1'
+
+    implementation "android.arch.lifecycle:extensions:$lifecycle_ver"
+    implementation "android.arch.lifecycle:viewmodel:$lifecycle_ver"
+
 }
 
 apply plugin: 'com.google.gms.google-services'
+googleServices { disableVersionCheck = true }

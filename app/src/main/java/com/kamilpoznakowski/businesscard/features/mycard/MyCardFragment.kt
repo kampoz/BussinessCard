@@ -2,16 +2,16 @@ package com.kamilpoznakowski.businesscard.features.mycard
 
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.kamilpoznakowski.businesscard.R
-import com.kamilpoznakowski.businesscard.features.createcard.CreateCardFragment
-import kotlinx.android.synthetic.main.fragment_my_card.*
-import kotlinx.android.synthetic.main.fragment_my_card.view.*
+import com.kamilpoznakowski.businesscard.features.cards.CardViewModelFactory
+import com.kamilpoznakowski.businesscard.repository.CardRepositoryImpl
+import com.kamilpoznakowski.businesscard.viewmodel.CardViewModel
+import org.koin.android.ext.android.get
 
 /**
  * A simple [Fragment] subclass.
@@ -24,12 +24,8 @@ class MyCardFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_my_card, container, false)
-//        view.imageButton?.setOnClickListener {
-////            findNavController().navigate(R.id.nav_create_card_fragment, null)
-//            findNavController().navigate(R.id.action_nav_two_to_createCardFragment, null)
-//        }
-
-//        val action = CreateCardFragmentDirections.
+        val cardViewModelFactory = CardViewModelFactory(get<CardRepositoryImpl>())
+        var cardViewModel = ViewModelProvider(this, cardViewModelFactory).get(CardViewModel::class.java)
 
         return view
     }
